@@ -32,13 +32,13 @@ public func configure(_ app: Application) throws {
 }
 
 extension URL {
-    static let databaseUrl = URL(string: "postgresql://myrkwill@localhost/tododb")!
+    static let databaseUrl = URL(string: "")!
 }
 
 extension MailgunDomain {
-    static var mailgunDomain: MailgunDomain { .init("sandbox650937d9ed6b40128afa8d526d2dde9c.mailgun.org", .us) }
+    static var mailgunDomain: MailgunDomain { .init("", .us) }
 }
 
 extension MailgunConfiguration {
-    static var mailgunKey: MailgunConfiguration { .init(apiKey: "key-4ab22f74a3f218019a9cc8ff12351a0a") }
+    static var mailgunKey: MailgunConfiguration { .init(apiKey: "") }
 }
