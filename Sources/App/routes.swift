@@ -1,11 +1,9 @@
 import Vapor
+import Mailgun
+import Leaf
 
 func routes(_ app: Application) throws {
-    app.get { req in
-        return "It works!"
-    }
-
-    app.get("hello") { req -> String in
-        return "Hello, world!"
-    }
+    try app.register(collection: ListController())
+    try app.register(collection: TodoController())
+    try app.register(collection: TagController())
 }
